@@ -5,7 +5,6 @@
     "NEXT_PUBLIC_*",
     "SB_*",
     "SANITY_*",
-    "NEXT_PREVIEW_TOKEN",
     "NODE_ENV",
     "VERCEL_ENV",
     "VERCEL_REDEPLOY_HOOK_URL"

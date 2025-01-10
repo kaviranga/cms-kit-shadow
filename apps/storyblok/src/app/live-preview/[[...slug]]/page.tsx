@@ -11,10 +11,6 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   return fetchStoryMetadata("draft", params.slug);
 }
 
-export async function generateStaticParams() {
-  return [];
-}
-
 export default async function Home(props: Props) {
   const params = await props.params;
   const {
