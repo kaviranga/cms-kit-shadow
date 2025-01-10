@@ -1,25 +1,27 @@
-import { fetchStoriesByParams, isDraftModeEnv } from "@/lib/api";
+// import { fetchStoriesByParams, isDraftModeEnv } from "@/lib/api";
+// import { fetchStories } from "@/lib/storyblok";
+import { fetchStories } from "@/lib/storyblok";
 import { DataContextProvider } from "@/components/DataContext";
-import StoryblokProvider from "@/components/StoryblokProvider";
 
 import type { ICoreLayoutProps } from "./types";
 
 export default async function CoreLayout({
   children,
+  version,
   allResolvedLinks,
 }: ICoreLayoutProps) {
-  const { data } = await fetchStoriesByParams(isDraftModeEnv, {
+  const {
+    data: { stories: globalComponentsStories },
+  } = await fetchStories(version, {
     by_slugs: "components/*",
   });
 
   return (
-    <StoryblokProvider>
-      <DataContextProvider
-        globalComponentsStories={data}
-        allResolvedLinks={allResolvedLinks}
-      >
-        {children}
-      </DataContextProvider>
-    </StoryblokProvider>
+    <DataContextProvider
+      globalComponentsStories={globalComponentsStories}
+      allResolvedLinks={allResolvedLinks}
+    >
+      {children}
+    </DataContextProvider>
   );
 }

@@ -1,31 +1,32 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { StoryblokStory } from "@storyblok/react/rsc";
 
 import { fetchStory, fetchStoryMetadata } from "@/lib/storyblok";
 import CoreLayout from "@/components/CoreLayout";
 
-export async function generateMetadata(props: Props) {
+export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
 
-  return fetchStoryMetadata("published", params.slug);
+  return fetchStoryMetadata("draft", params.slug);
 }
 
 export async function generateStaticParams() {
   return [];
 }
 
-export default async function DynamicPage(props: Props) {
+export default async function Home(props: Props) {
   const params = await props.params;
   const {
     data: { story, links },
-  } = await fetchStory("published", params.slug);
+  } = await fetchStory("draft", params.slug);
 
-  if (!story) {
+  if (!story || process.env.NEXT_PUBLIC_IS_PREVIEW !== "true") {
     notFound();
   }
 
   return (
-    <CoreLayout version="published" allResolvedLinks={links}>
+    <CoreLayout version="draft" allResolvedLinks={links}>
       <StoryblokStory story={story} />
     </CoreLayout>
   );
