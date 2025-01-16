@@ -1,7 +1,9 @@
 import { execSync } from "child_process";
+import fs from "fs";
 import ora from "ora";
 
 import {
+  createAccessToken,
   createStoryblokSpace,
   createStoryblokWebhook,
   updatePageComponentSectionsField,
@@ -12,7 +14,7 @@ import {
   createProjectDeployment,
   createVercelProject,
 } from "./services/vercel.mjs";
-import { modifyFile } from "./utils/file.mjs";
+import { modifyJsonFile, replaceTextInFile } from "./utils/file.mjs";
 import { openUrlAndConfirm } from "./utils/open.mjs";
 import {
   promptForProjectName,
@@ -80,8 +82,13 @@ const main = async () => {
     await uploadBackupStories(spaceId);
     spinner.succeed("Successfully filled new space with data 🎉");
 
-    // Create Vercel production and preview projects
+    console.log(
+      "Creating public storyblok token for production environment ⏳",
+    );
+    const { token: publicToken } = await createAccessToken(spaceId, "public");
+    console.log("Successfully created public storyblok token ✅");
 
+    // Create Vercel production and preview projects
     spinner.start("Creating Vercel production and preview projects ⏳");
     const whRevalidateSecret = crypto.randomUUID();
     const {
@@ -92,8 +99,7 @@ const main = async () => {
       projectName,
       sbParams: {
         isPreview: false,
-        spaceId,
-        previewToken,
+        storyblokToken: publicToken,
         whRevalidateSecret,
       },
     });
@@ -106,8 +112,7 @@ const main = async () => {
       projectName,
       sbParams: {
         isPreview: true,
-        spaceId,
-        previewToken,
+        storyblokToken: previewToken,
         whRevalidateSecret,
       },
     });
@@ -119,7 +124,7 @@ const main = async () => {
 
     spinner.start("Updating Storyblok space with Vercel data⏳");
     await updateStoryblokSpace(spaceId, {
-      domain: `${previewDeploymentUrl}/`,
+      domain: `${previewDeploymentUrl}/live-preview/`,
     });
     await createStoryblokWebhook(
       spaceId,
@@ -142,16 +147,30 @@ const main = async () => {
       "Successfully created Vercel production and preview deployments 🎉",
     );
 
-    spinner.start("Updating apps/storyblok/package.json ⏳");
-    modifyFile("../package.json", "293915", spaceId);
-    spinner.succeed("apps/storyblok/package.json updated ✅");
+    if (!process.env.DEBUG) {
+      spinner.start("Removing unrelated files and scripts ⏳");
+      execSync("rm -rf ../../sanity", {
+        stdio: "ignore",
+      });
 
-    spinner.start("Removing unrelated files and scripts ⏳");
-    execSync("rm -rf ../../sanity", {
-      stdio: "ignore",
-    });
+      execSync("rm -rf ../src/generated/dump", {
+        stdio: "ignore",
+      });
 
-    spinner.succeed("Sanity folder removed ✅");
+      replaceTextInFile("../package.json", "293915", spaceId);
+      // remove pull-schemas script from package.json
+      modifyJsonFile("../package.json", (contentJson) => {
+        delete contentJson.scripts["pull-stories"];
+
+        return contentJson;
+      });
+
+      execSync("git add . && git commit -m 'Cleanup' && git push", {
+        stdio: "ignore",
+      });
+
+      spinner.succeed("Sanity folder removed ✅");
+    }
 
     console.log(
       colorText(
