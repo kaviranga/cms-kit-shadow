@@ -1,21 +1,14 @@
 import fs from "fs";
 
 export function replaceTextInFile(path, oldText, newText) {
-  fs.readFile(path, "utf8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-
+  try {
+    const data = fs.readFileSync(path, "utf8");
     const modifiedData = data.replace(oldText, newText);
-
-    fs.writeFile(path, modifiedData, (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-    });
-  });
+    fs.writeFileSync(path, modifiedData);
+  } catch (err) {
+    console.error(err);
+    return;
+  }
 }
 
 export function modifyJsonFile(path, transformer) {
