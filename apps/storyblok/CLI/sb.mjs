@@ -165,7 +165,7 @@ const main = async () => {
         return contentJson;
       });
 
-      execSync("git add . && git commit -m 'Cleanup' && git push", {
+      execSync("git add -A && git commit -m 'Cleanup' && git push", {
         stdio: "ignore",
       });
 
