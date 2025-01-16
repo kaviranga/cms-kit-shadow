@@ -62,6 +62,15 @@ The project serves the idea of making Headless CMS-based development accessible,
    - Choose a project name
    - Complete the space creation and configuration process
 
+9. Go to project settings in Vercel dashboard
+    - select **Git** section
+    - create deploy hook and copy it
+    - select **Environment variables** section
+    - add variables called **VERCEL_REDEPLOY_HOOK_URL** and assign it to created deploy hook value
+    - trigger rebuild
+
+This process ensures that global component updates are displayed on all pages.
+   
 ### [TODO]: add video example
 
 ### Sanity
