@@ -11,7 +11,7 @@
         "package.json",
         "CHANGELOG.md"
       ],
-      "message": "bump version: ${nextRelease.version}"
+      "message": "release: ${nextRelease.version}"
     }
   ]
 }
