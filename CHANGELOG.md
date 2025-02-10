@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/focusreactive/cms-kit/compare/v1.0.2...v1.0.3) (2025-02-10)
+
+
+### Features
+
+* **sanity-template-selector:** move package to monorepo, fix related problems ([#85](https://github.com/focusreactive/cms-kit/issues/85)) ([3e5d5bf](https://github.com/focusreactive/cms-kit/commit/3e5d5bf852367a2691620f3116e806f142867aa6))
+
 ## [1.0.2](https://github.com/focusreactive/cms-kit/compare/v1.0.1...v1.0.2) (2025-01-29)
 
 
