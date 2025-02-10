@@ -1,13 +1,11 @@
 {
-  "maxWidth": "base​​​​‌‌",
-  "backgroundColor": "none‍",
+  "maxWidth": "base",
+  "backgroundColor": "none",
   "_type": "section.logos",
-  "alignVariant": "center​​​​‌",
-  "marginBottom": "base​​​​‌",
-  "_key": "92db570ae9c5",
+  "alignVariant": "center",
+  "marginBottom": "base",
   "items": [
     {
-      "_key": "48f5d8c30794",
       "type": "logo",
       "image": {
         "aspectRatio": "3/1",
@@ -29,7 +27,7 @@
         "variant": "default",
         "text": "link text",
         "type": "internal",
-        "target": "_self​​",
+        "target": "_self",
         "url": null
       }
     },
@@ -38,13 +36,12 @@
       "link": {
         "text": "link text",
         "type": "internal",
-        "target": "_self​",
-        "size": "base​​​",
+        "target": "_self",
+        "size": "base",
         "_type": "customLink",
         "variant": "default",
         "url": null
       },
-      "_key": "09a3481afc801a6b1c7ba37c72d075f4",
       "type": "logo",
       "image": {
         "_type": "customImage",
@@ -72,33 +69,31 @@
             "_ref": "image-6e6cc1187326add2d8ddc718895981e3376338cc-716x200-webp"
           },
           "_type": "image",
-          "alt": "hygraph​​​​‌"
+          "alt": "hygraph"
         }
       },
       "_type": "logoItem",
       "link": {
-        "text": "link text​​​​",
+        "text": "link text",
         "url": null,
         "type": "internal",
-        "target": "_self​​​​‌",
-        "size": "base​​​​‌",
+        "target": "_self",
+        "size": "base",
         "_type": "customLink",
         "variant": "default"
-      },
-      "_key": "2d441c5f50af821299e3c4d177b0bcb1"
+      }
     },
     {
       "_type": "logoItem",
       "link": {
-        "size": "base​​​​‌",
+        "size": "base",
         "_type": "customLink",
         "url": null,
         "variant": "default",
         "text": "link text",
         "type": "internal",
-        "target": "_self​​"
+        "target": "_self"
       },
-      "_key": "7cf2eb61d1ccb04c545eda2a7d8dfebd",
       "type": "logo",
       "image": {
         "_type": "customImage",
@@ -106,7 +101,7 @@
         "height": 300,
         "image": {
           "_type": "image",
-          "alt": "ghost​​",
+          "alt": "ghost",
           "asset": {
             "_ref": "image-14480f7e6cffd126f29ca432552f310e8b01559c-800x294-webp",
             "_type": "reference"
@@ -115,12 +110,11 @@
       }
     },
     {
-      "_key": "782a25eb852075058097ec214d1a2b8c",
       "type": "logo",
       "image": {
         "image": {
           "_type": "image",
-          "alt": "gatsby​",
+          "alt": "gatsby",
           "asset": {
             "_ref": "image-d356e78adf7bb1d8b313aedd75de21701a915eeb-2000x555-webp",
             "_type": "reference"
@@ -132,8 +126,8 @@
       },
       "_type": "logoItem",
       "link": {
-        "target": "_self​​​",
-        "size": "base​​​​‌",
+        "target": "_self",
+        "size": "base",
         "url": null,
         "_type": "customLink",
         "variant": "default",
@@ -142,5 +136,5 @@
       }
     }
   ],
-  "marginTop": "base​​​​‌"
+  "marginTop": "base"
 }
