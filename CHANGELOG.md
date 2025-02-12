@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/focusreactive/cms-kit/compare/v1.0.6...v1.0.7) (2025-02-12)
+
+
+### Bug Fixes
+
+* **sanity roll out:** add and use modifyJsonFile function ([b874ce0](https://github.com/focusreactive/cms-kit/commit/b874ce039c8d41d55590cd4ee4c921369e833eaa))
+
 ## [1.0.6](https://github.com/focusreactive/cms-kit/compare/v1.0.5...v1.0.6) (2025-02-12)
 
 
