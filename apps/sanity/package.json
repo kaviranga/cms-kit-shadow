@@ -7,9 +7,9 @@
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
-    "rollout": "./src/lib/rollout-tools/local/cli.mjs",
     "extract-schema": "pnpm sanity schema extract --path src/generated/extracted-schema.json --enforce-required-fields",
-    "gen:types": "pnpm extract-schema && pnpm sanity typegen generate"
+    "gen:types": "pnpm extract-schema && pnpm sanity typegen generate",
+    "update-dataset": "sanity dataset export production src/generated/initial-data.tar.gz"
   },
   "dependencies": {
     "@focus-reactive/sanity-template-selector": "workspace:*",

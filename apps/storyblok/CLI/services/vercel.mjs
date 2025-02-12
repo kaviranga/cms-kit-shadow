@@ -31,32 +31,6 @@ export async function getVercelTeams() {
   }));
 }
 
-export async function getVercelUserInfo() {
-  const envs = loadEnvVariables();
-  const token = envs.VERCEL_PERSONAL_AUTH_TOKEN;
-
-  const response = await fetch("https://api.vercel.com/v2/user", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  });
-
-  if (!response.ok) {
-    console.log(response.status, response.statusText, await response.json());
-    throw new Error(`❌ HTTP error! Status: ${response.status}`);
-  }
-
-  const data = await response.json();
-
-  return {
-    name: data.user.name,
-    email: data.user.email,
-    profileImage: data.user.profileImage,
-  };
-}
-
 export async function createVercelProject({ projectName, sbParams }) {
   const { isPreview, storyblokToken, whRevalidateSecret } = sbParams;
   const envs = loadEnvVariables();
