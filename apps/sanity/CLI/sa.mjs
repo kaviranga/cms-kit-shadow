@@ -48,16 +48,16 @@ const main = async () => {
     await createSanityProject(projectName);
     spinner.succeed(`Successfully created Sanity project ✅`);
 
+    spinner.start("Creating Sanity read token ⏳");
+    await createSanityReadToken();
+    spinner.succeed("Sanity read token created ✅");
+
     spinner.start("Creating Vercel project ⏳");
     const { projectId: vercelProjectId, deploymentUrl } =
       await createVercelProject({
         projectName,
       });
     spinner.succeed("Vercel project created ✅");
-
-    spinner.start("Creating Sanity read token ⏳");
-    await createSanityReadToken();
-    spinner.succeed("Sanity read token created ✅");
 
     spinner.start(`Creating Sanity CORS entries for ${deploymentUrl} ⏳`);
     await createSanityCorsEntry(deploymentUrl);
