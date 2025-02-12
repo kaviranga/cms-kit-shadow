@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/focusreactive/cms-kit/compare/v1.0.5...v1.0.6) (2025-02-12)
+
+
+### Bug Fixes
+
+* **sanity rollout:** fix missing import ([90a0515](https://github.com/focusreactive/cms-kit/commit/90a0515ad5b260bdfc9e3274325ffbf6d6ad6a4b))
+
 ## [1.0.5](https://github.com/focusreactive/cms-kit/compare/v1.0.4...v1.0.5) (2025-02-12)
 
 
