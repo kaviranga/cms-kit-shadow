@@ -15,6 +15,7 @@ import {
   createVercelProject,
 } from "./services/vercel.mjs";
 import { loadEnvVariables } from "./utils/envs.mjs";
+import { modifyJsonFile } from "./utils/file.mjs";
 import {
   promptForDatasetName,
   promptForProjectName,
