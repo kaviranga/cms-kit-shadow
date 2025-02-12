@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/focusreactive/cms-kit/compare/v1.0.3...v1.0.4) (2025-02-12)
+
+
+### Bug Fixes
+
+* **sanity rollout:** rollout script, simplify and unift the logic ([#87](https://github.com/focusreactive/cms-kit/issues/87)) ([980ef90](https://github.com/focusreactive/cms-kit/commit/980ef909993d732d37fa429d72660a12a663839a))
+
 ## [1.0.3](https://github.com/focusreactive/cms-kit/compare/v1.0.2...v1.0.3) (2025-02-10)
 
 
