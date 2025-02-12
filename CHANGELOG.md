@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/focusreactive/cms-kit/compare/v1.0.4...v1.0.5) (2025-02-12)
+
+
+### Bug Fixes
+
+* **sanity rollout:** change actions order ([2cccadc](https://github.com/focusreactive/cms-kit/commit/2cccadc26ad95c52f2a9bdec90a48ab17b5e0d87))
+
 ## [1.0.4](https://github.com/focusreactive/cms-kit/compare/v1.0.3...v1.0.4) (2025-02-12)
 
 
