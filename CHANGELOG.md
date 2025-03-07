@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/focusreactive/cms-kit/compare/v1.0.8...v1.0.9) (2025-03-07)
+
+
+### Features
+
+* **section padding property:** add common PaddingX and PaddingY property to every section ([#91](https://github.com/focusreactive/cms-kit/issues/91)) ([ef1f723](https://github.com/focusreactive/cms-kit/commit/ef1f723a4328326954440bb41168e6f6fdb1d84a))
+
 ## [1.0.8](https://github.com/focusreactive/cms-kit/compare/v1.0.7...v1.0.8) (2025-02-12)
 
 ## [1.0.7](https://github.com/focusreactive/cms-kit/compare/v1.0.6...v1.0.7) (2025-02-12)
