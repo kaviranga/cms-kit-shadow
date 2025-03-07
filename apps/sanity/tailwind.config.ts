@@ -14,7 +14,11 @@ const config: Config = {
       },
       margin: {
         sectionBase: "var(--section-margin-base)",
-        sectionLg: "var(--section-margin-lg)",
+        sectionLarge: "var(--section-margin-large)",
+      },
+      padding: {
+        sectionBase: "var(--section-padding-base)",
+        sectionLarge: "var(--section-padding-large)",
       },
     },
   },

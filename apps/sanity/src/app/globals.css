@@ -4,7 +4,10 @@
 
 :root {
   --section-margin-base: 24px;
-  --section-margin-lg: 72px;
+  --section-margin-large: 72px;
+
+  --section-padding-base: 16px;
+  --section-padding-large: 72px;
 }
 
 .light {

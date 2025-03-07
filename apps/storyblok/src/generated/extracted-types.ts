@@ -28,13 +28,15 @@ export interface AssetStoryblok {
 
 export interface BlogStoryblok {
   style: "three-column" | "three-column-with-images" | "three-column-with-background-images";
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
+  maxWidth: "base" | "none" | "small";
+  backgroundImage?: AssetStoryblok;
   text: RichTextStoryblok[];
   posts: BlogPostStoryblok[];
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
-  maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
-  backgroundImage?: AssetStoryblok;
   component: "blog";
   _uid: string;
   [k: string]: any;
@@ -51,28 +53,32 @@ export interface BlogPostStoryblok {
 }
 
 export interface CardsGridStoryblok {
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
   columns: "1" | "2" | "3";
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
   maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
-  items: DefaultCardStoryblok[];
   backgroundImage?: AssetStoryblok;
+  items: DefaultCardStoryblok[];
   component: "cardsGrid";
   _uid: string;
   [k: string]: any;
 }
 
 export interface CarouselStoryblok {
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
+  maxWidth: "base" | "none" | "small";
+  backgroundImage?: AssetStoryblok;
   slidesPerView: string;
   slides: CarouselSlideStoryblok[];
   effect?: "slide" | "coverflow" | "cube" | "fade" | "flip" | "cards";
   loop?: boolean;
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
-  maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
-  backgroundImage?: AssetStoryblok;
   component: "carousel";
   _uid: string;
   [k: string]: any;
@@ -87,13 +93,15 @@ export interface CarouselSlideStoryblok {
 }
 
 export interface CopyStoryblok {
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
   isReversedOnMobile?: boolean;
-  columns: RichTextStoryblok[];
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
   maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
   backgroundImage?: AssetStoryblok;
+  columns: RichTextStoryblok[];
   component: "copy";
   _uid: string;
   [k: string]: any;
@@ -132,16 +140,18 @@ export interface HeaderStoryblok {
 }
 
 export interface HeroStoryblok {
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
+  maxWidth: "base" | "none" | "small";
+  backgroundImage?: AssetStoryblok;
   globalData?: ISbStoryData<HeroStoryblok> | string;
   title?: string;
   text?: RichTextStoryblok[];
   image: ImageStoryblok[];
   links: LinkStoryblok[];
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
-  maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
-  backgroundImage?: AssetStoryblok;
   component: "hero";
   _uid: string;
   [k: string]: any;
@@ -240,13 +250,15 @@ export interface LinkStoryblok {
 }
 
 export interface LinksListStoryblok {
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
   alignVariant: "left" | "center" | "right";
-  links: LinkStoryblok[];
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
   maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
   backgroundImage?: AssetStoryblok;
+  links: LinkStoryblok[];
   component: "linksList";
   _uid: string;
   [k: string]: any;
@@ -262,12 +274,14 @@ export interface LogoItemStoryblok {
 }
 
 export interface LogosStoryblok {
-  alignVariant: "left" | "center" | "right";
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
   items: LogoItemStoryblok[];
-  marginTop: "none" | "base" | "lg";
-  marginBottom: "none" | "base" | "lg";
+  alignVariant: "left" | "center" | "right";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
   maxWidth: "base" | "none" | "small";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
   backgroundImage?: AssetStoryblok;
   component: "logos";
   _uid: string;
@@ -291,36 +305,8 @@ export interface PageStoryblok {
   robots: "index" | "no-index";
   showCookieBanner?: boolean;
   footer: ISbStoryData<FooterStoryblok> | string;
-  theme: "light" | "dark";
+  theme: "light" | "dark" | "light-gray" | "dark-gray";
   component: "page";
-  _uid: string;
-  [k: string]: any;
-}
-
-export interface PricingTableExtraServiceStoryblok {
-  text: string;
-  cost: string;
-  component: "pricingTableExtraService";
-  _uid: string;
-  [k: string]: any;
-}
-
-export interface PricingTableTierStoryblok {
-  name: string;
-  icon: ImageStoryblok[];
-  price?: string;
-  description: string;
-  features: PricingTableTierFeatureStoryblok[];
-  link: LinkStoryblok[];
-  popular?: boolean;
-  component: "pricingTableTier";
-  _uid: string;
-  [k: string]: any;
-}
-
-export interface PricingTableTierFeatureStoryblok {
-  text: string;
-  component: "pricingTableTierFeature";
   _uid: string;
   [k: string]: any;
 }
@@ -339,15 +325,6 @@ export interface RichTextStoryblok {
   removeInnerMargins?: boolean;
   content: RichtextStoryblok;
   component: "richText";
-  _uid: string;
-  [k: string]: any;
-}
-
-export interface StepGuideItemStoryblok {
-  number: string;
-  text: string;
-  image: ImageStoryblok[];
-  component: "stepGuideItem";
   _uid: string;
   [k: string]: any;
 }
