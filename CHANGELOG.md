@@ -1,3 +1,25 @@
+# 1.0.0 (2025-03-07)
+
+
+### Bug Fixes
+
+* add @semantic-release/github to create github release for every version ([af35d20](https://github.com/kaviranga/cms-kit-shadow/commit/af35d20753963b9ea76eb141de4ec01776786671))
+* release flow to update package.json file and specify commit change format ([3455cf9](https://github.com/kaviranga/cms-kit-shadow/commit/3455cf90063dded18be50b7eb8af3c5dbdfaa81a))
+* **sanity roll out:** add and use modifyJsonFile function ([b874ce0](https://github.com/kaviranga/cms-kit-shadow/commit/b874ce039c8d41d55590cd4ee4c921369e833eaa))
+* **sanity rollout:** change actions order ([2cccadc](https://github.com/kaviranga/cms-kit-shadow/commit/2cccadc26ad95c52f2a9bdec90a48ab17b5e0d87))
+* **sanity rollout:** fix missing import ([90a0515](https://github.com/kaviranga/cms-kit-shadow/commit/90a0515ad5b260bdfc9e3274325ffbf6d6ad6a4b))
+* **sanity rollout:** rollout script, simplify and unift the logic ([#87](https://github.com/kaviranga/cms-kit-shadow/issues/87)) ([980ef90](https://github.com/kaviranga/cms-kit-shadow/commit/980ef909993d732d37fa429d72660a12a663839a))
+
+
+### Features
+
+* components with global data ([#69](https://github.com/kaviranga/cms-kit-shadow/issues/69)) ([29d640f](https://github.com/kaviranga/cms-kit-shadow/commit/29d640f93b00fb4621824a8b08c0af3d7e9a3267))
+* fix release flow ([6df2080](https://github.com/kaviranga/cms-kit-shadow/commit/6df208014e37f54f1e7f174b6afd76d1952ddbf6))
+* **sanity-template-selector:** move package to monorepo, fix related problems ([#85](https://github.com/kaviranga/cms-kit-shadow/issues/85)) ([3e5d5bf](https://github.com/kaviranga/cms-kit-shadow/commit/3e5d5bf852367a2691620f3116e806f142867aa6))
+* **section padding property:** add common PaddingX and PaddingY property to every section ([#91](https://github.com/kaviranga/cms-kit-shadow/issues/91)) ([ef1f723](https://github.com/kaviranga/cms-kit-shadow/commit/ef1f723a4328326954440bb41168e6f6fdb1d84a))
+* setup semantic-release for automated versioning ([#86](https://github.com/kaviranga/cms-kit-shadow/issues/86)) ([86954af](https://github.com/kaviranga/cms-kit-shadow/commit/86954af4bcf3fad2ec4084e18096bf970c524092))
+* update next for storyblok project ([#65](https://github.com/kaviranga/cms-kit-shadow/issues/65)) ([06e312d](https://github.com/kaviranga/cms-kit-shadow/commit/06e312df3afcb3ace2c92f6b8bf98673e749de05))
+
 ## [1.0.9](https://github.com/focusreactive/cms-kit/compare/v1.0.8...v1.0.9) (2025-03-07)
 
 
